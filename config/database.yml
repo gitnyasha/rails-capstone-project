@@ -21,6 +21,5 @@ test:
   database: db/test.sqlite3
 
 production:
-   adapter: postgresql
-  encoding: unicode
-  database: group-transcations_production
+  <<: *default
+  database: db/production.sqlite3
