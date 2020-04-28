@@ -16,7 +16,6 @@ class ExpensesTest < ApplicationSystemTestCase
 
     fill_in "Amount", with: @expense.amount
     fill_in "Name", with: @expense.name
-    fill_in "User", with: @expense.user_id
     click_on "Create Expense"
 
     assert_text "Expense was successfully created"
@@ -29,7 +28,6 @@ class ExpensesTest < ApplicationSystemTestCase
 
     fill_in "Amount", with: @expense.amount
     fill_in "Name", with: @expense.name
-    fill_in "User", with: @expense.user_id
     click_on "Update Expense"
 
     assert_text "Expense was successfully updated"

@@ -1,31 +1,22 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Groups</h1>
+<%= link_to "New Group", new_group_path %>
+<div class="container">
+  <% @groups.each do |group| %>
+  <div class="row">
+    <div class="col">
+      <%= image_tag group.icon.url, class: "img-thumbnail" if group.icon? %>
+    </div>
+    <div class="col-6">
+      <%= group.name %><br>
+      <%= group.created_at %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Icon</th>
-      <th>Created at</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @groups.each do |group| %>
-      <tr>
-        <td><%= group.name %></td>
-        <td><%= group.icon %></td>
-        <td><%= group.created_at %></td>
-        <td><%= link_to 'Show', group %></td>
-        <td><%= link_to 'Edit', edit_group_path(group) %></td>
-        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Group', new_group_path %>
+    </div>
+    <div class="col">
+    <td><%= link_to "Show", group %></td>
+        <td><%= link_to "Edit", edit_group_path(group) %></td>
+        <td><%= link_to "Destroy", group, method: :delete, data: { confirm: "Are you sure?" } %></td>
+    </div>
+  </div>
+  <hr>
+  <% end %>
+</div>

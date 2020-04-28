@@ -1,6 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Username:</strong>
-  <%= @user.username %>
+  <strong>
+  <h3><%= @user.name %></h3>
+  </strong>
+</p>
+<p>
+<%= link_to 'Home Expenses', expenses_path, class: "btn btn-info" %>
+</p>
+<p>
+<%= link_to 'Groups', groups_path, class: "btn btn-info" %>
 </p>

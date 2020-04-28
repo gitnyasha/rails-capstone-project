@@ -1,31 +1,37 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Expenses</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Amount</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @expenses.each do |expense| %>
-      <tr>
-        <td><%= expense.name %></td>
-        <td><%= expense.amount %></td>
-        <td><%= expense.user_id %></td>
-        <td><%= link_to 'Show', expense %></td>
-        <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
-        <td><%= link_to 'Destroy', expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<%= link_to "Add New", new_expense_path, class: "btn btn-info" %>
+<div class="container">
+  <div class="row">
+     <div class="col">
+    Total Expenses
+  </div>
+   <div class="col-6">
+    
+  </div>
+   <div class="col">
+     <% @expenses.first(1).each do |expense| %>
+    <p>$<%= expense.total_expense %></p>
     <% end %>
-  </tbody>
-</table>
+  </div>
+  </div>
+  <hr>
+  <% @expenses.each do |expense| %>
 
-<br>
+  <div class="row">
+    <div class="col">
+      <%= image_tag expense.group.icon.url, class: "img-thumbnail" if expense.group.icon? %>
+    </div>
+    <div class="col-6">
+      <%= expense.name %><br>
+      <%= expense.created_at.strftime("%B %d %Y, %l:%M%P") %>
 
-<%= link_to 'New Expense', new_expense_path %>
+    </div>
+    <div class="col">
+      <p>$<%= expense.amount %></p><br>
+      <%= link_to "Show", expense %>
+      <%= link_to "Edit", edit_expense_path(expense) %>
+      <%= link_to "Destroy", expense, method: :delete, data: { confirm: "Are you sure?" } %>
+    </div>
+  </div>
+  <hr>
+  <% end %>
+</div>

@@ -7,7 +7,7 @@
 
 <p>
   <strong>Icon:</strong>
-  <%= @group.icon %>
+      <%= image_tag @group.icon.url, class: "img-thumbnail" if @group.icon? %>
 </p>
 
 <p>
@@ -15,5 +15,5 @@
   <%= @group.created_at %>
 </p>
 
-<%= link_to 'Edit', edit_group_path(@group) %> |
-<%= link_to 'Back', groups_path %>
+<%= link_to "Edit", edit_group_path(@group) %> |
+<%= link_to "Back", groups_path %>
