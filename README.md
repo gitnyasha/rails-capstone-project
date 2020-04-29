@@ -13,20 +13,6 @@ You can create an account and start grouping expenses with your family. You can 
 
 [Group transactions](https://calm-beyond-52136.herokuapp.com/)
 
-## Installation
-
-### prerequisites
-
-1. Install ImageMagick and/or libvips:
-
-   \$ brew install imagemagick vips
-
-**Note:** if you haven't installed `brew`, check [this](https://docs.brew.sh/Homebrew-on-Linux#install) out.
-
-2. Get a local copy of the project cloning the[repository](https://github.com/gitnyasha/rails-capstone-project):
-
-   \$ git colone https://github.com/gitnyasha/rails-capstone-project.git
-
 ### install
 
 Be sure to run `bundle` to install all necesary
