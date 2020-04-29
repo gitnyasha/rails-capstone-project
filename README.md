@@ -39,7 +39,7 @@ Run the next command
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/gitnyasha/group-transactions/issues).
+Feel free to check the [issues page](https://github.com/gitnyasha/rails-capstone-project/issues).
 
 ## 📝 License
 
