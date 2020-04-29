@@ -32,7 +32,7 @@ Run the next command
 👤 **Marshall Nyasha Chikari**
 
 - Github: [@gitnyasha](https://github.com/gitnyasha)
-- Twitter: [@fivanunam](https://twitter.com/marshallchikari)
+- Twitter: [@marshallchikari](https://twitter.com/marshallchikari)
 - Linkedin: [Marshall Chikari](https://www.linkedin.com/in/marshall-chikari)
 
 ## 🤝 Contributing
