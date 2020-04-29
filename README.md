@@ -23,9 +23,9 @@ You can create an account and start grouping expenses with your family. You can 
 
 **Note:** if you haven't installed `brew`, check [this](https://docs.brew.sh/Homebrew-on-Linux#install) out.
 
-2. Get a local copy of the project cloning the[repository](https://github.com/fivan18/group-transactions):
+2. Get a local copy of the project cloning the[repository](https://github.com/gitnyasha/rails-capstone-project):
 
-   \$ git colone https://github.com/fivan18/group-transactions.git
+   \$ git colone https://github.com/gitnyasha/rails-capstone-project.git
 
 ### install
 
@@ -33,7 +33,7 @@ Be sure to run `bundle` to install all necesary
 
     $ bundle install
 
-Use the terminal and go inside the [project's](https://github.com/fivan18/group-transactions) root directory and run the next command
+Use the terminal and go inside the [project's](https://github.com/gitnyasha/rails-capstone-project) root directory and run the next command
 
     $ rails db:migrate
 
