@@ -1,27 +1,32 @@
 <div class="container-fluid">
 <div class="row m-2">
 <div class="col">
-  <h3 class="text-center"><%= @user.name %></h3>
+<%= image_tag ("pro.png"), class: "img-thumbnail" %>
+</div>
+<div class="col-8">
+  <h3 class="text-center pt-5 text-white"><%= @user.name %></h3>
 </div>
 </div>
-<div class="row m-2">
+<div class="row mt-5 m-2">
 <div class="col">
-<p class="text-center">
-<%= link_to "Groups", groups_path, class: "btn btn-info" %>
+<p class="m-2">
+<%= link_to "Groups", groups_path, class: "btn btn-light" %>
 </p>
 </div>
 </div>
+<hr>
 <div class="row m-2">
 <div class="col">
-<p class="text-center">
-<%= link_to "Expenses", expenses_path, class: "btn btn-info" %>
+<p class="m-2">
+<%= link_to "Expenses", expenses_path, class: "btn btn-light" %>
 </p>
 </div>
 </div>
+<hr>
 <div class="row m-2">
 <div class="col">
-<p class="text-center">
-<%= link_to "External Expenses", externals_path, class: "btn btn-info" %>
+<p class="m-2">
+<%= link_to "External Expenses", externals_path, class: "btn btn-light" %>
 </p>
 </div>
 </div>

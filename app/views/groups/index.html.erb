@@ -1,26 +1,24 @@
 
-<%= link_to "New Group", new_group_path, class: "btn btn-info m-2" %>
-<hr>
-<div class="container">
+<%= link_to "New Group", new_group_path, class: "btn btn-light m-2" %>
+<div class="container bg-light">
   <% @groups.each do |group| %>
-  <div class="row alert alert-info">
-    <div class="col">
+  <div class="row alert alert-secondary">
+    <div class="col-3">
     <%= link_to group do %>
-      <%= image_tag group.icon.url, class: "img-thumbnail", alt: "icon" if group.icon? %>
+      <%= image_tag group.icon.url, class: "img-thumbnail float-left", alt: "icon" if group.icon? %>
     </div>
-    <div class="col-6">
+    <div class="col-12">
       <h5 class="text-muted"><%= group.name.capitalize %></h5>
-      <p><small class="text-muted"><%= group.created_at.strftime("%B %d %Y, %l:%M%P") %></small></p>
+      <small class="text-muted"><%= group.created_at.strftime("%B %d %Y, %l:%M%P") %></small>
     </div>
       <% end %>
     <div class="col">
-    <%= link_to "Show", group %>
+    <%= link_to "Show", group %><br>
         <% if current_user.id == group.user.id %>
-        <%= link_to "Edit", edit_group_path(group) %>
+        <%= link_to "Edit", edit_group_path(group) %><br>
         <%= link_to "Destroy", group, method: :delete, data: { confirm: "Are you sure?" } %>
       <% end %>
     </div>
   </div>
-  <hr>
   <% end %>
 </div>

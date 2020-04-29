@@ -1,3 +1,4 @@
+<div class="container bg-light">
 <%= image_tag @expense.group.icon.url, class: "img-thumbnail", alt: "icon" if @expense.group.icon? %>
 
 <p>
@@ -13,3 +14,4 @@
       <p class="text-muted"><small><%= @expense.created_at.strftime("%B %d %Y, %l:%M%P") %></small></p>
 
 <%= link_to "Back", expenses_path, class: "btn btn-info m-2" %>
+</div>

@@ -1,8 +1,7 @@
-<%= link_to "Add New", new_external_path, class: "btn btn-info m-2" %>
-<hr>
-<div class="container">
-  <div class="row">
-     <div class="col">
+<%= link_to "Add New", new_external_path, class: "btn btn-light m-2" %>
+<div class="container bg-light">
+  <div class="row alert alert-secondary">
+     <div class="col-4">
     Total expenses
   </div>
    <div class="col-6">
@@ -17,7 +16,7 @@
   <hr>
   <% @externals.each do |external| %>
 
-  <div class="row tr alert alert-info">
+  <div class="row alert alert-secondary">
     <div class="col">
     <p>None</p>
     </div>
@@ -33,6 +32,5 @@
     <% end %>
     </div>
   </div>
-  <hr>
   <% end %>
 </div>

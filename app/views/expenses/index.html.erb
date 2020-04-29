@@ -1,8 +1,8 @@
-<%= link_to "Add New", new_expense_path, class: "btn btn-info m-2" %>
+<%= link_to "Add New", new_expense_path, class: "btn btn-light m-2" %>
 <hr>
-<div class="container">
-  <div class="row">
-     <div class="col">
+<div class="container btn-light">
+  <div class="row alert alert-secondary">
+     <div class="col-4">
     Total Expenses
   </div>
    <div class="col-6">
@@ -14,19 +14,18 @@
     <% end %>
   </div>
   </div>
-  <hr>
   <% @expenses.each do |expense| %>
 
-  <div class="row tr alert alert-info">
-    <div class="col-3">
+  <div class="row alert alert-secondary">
+    <div class="col-4">
       <%= link_to expense do %>
       <% if expense.group.icon? %>
-      <%= image_tag expense.group.icon.url, class: "img-thumbnail", alt: "icon" if expense.group.icon? %>
+      <%= image_tag expense.group.icon.url, class: "img-thumbnail float-left", alt: "icon" if expense.group.icon? %>
     <% else %>
     <p>None</p>
     <% end %>
     </div>
-    <div class="col-6">
+    <div class="col-12">
       <h3 class="text-muted"><%= expense.name.capitalize %></h3><br>
       <p class="text-muted"><small><%= expense.created_at.strftime("%B %d %Y, %l:%M%P") %></small></p>
     </div>
@@ -39,6 +38,5 @@
     <% end %>
     </div>
   </div>
-  <hr>
   <% end %>
 </div>

@@ -1,6 +1,7 @@
 
+
+<div class="container bg-light">
 <p>
-  <strong>Icon:</strong>
       <%= image_tag @group.icon.url, class: "img-thumbnail", alt: "icon" if @group.icon? %>
 </p>
 
@@ -9,18 +10,17 @@
   <%= @group.created_at.strftime("%B %d %Y, %l:%M%P") %>
 </p>
 
-<div class="container">
 <% if @group.expenses.any? %>
 <p>All Expenses for <%= @group.name %></p>
   <% @group.expenses.each do |expense| %>
 
-  <div class="row alert alert-info">
-    <div class="col">
+  <div class="row alert alert-secondary">
+    <div class="col-3">
         <%= link_to expense do %>
         <h3 class="text-muted"> <%= expense.name.capitalize %></h3>
 
     </div>
-    <div class="col-6">
+    <div class="col-10">
       <p class="text-muted"><%= expense.created_at.strftime("%B %d %Y") %><small class="text-muted"> by <%= expense.user.name %></small></p>
     </div>
     <% end %>
@@ -39,4 +39,4 @@
   <p>There are currently no expenses associated with this group.</p>
   <% end %>
 </div>
-<%= link_to "Back", groups_path, class: "btn btn-info m-2" %>
+<%= link_to "Back", groups_path, class: "btn btn-light m-2" %>
