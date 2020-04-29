@@ -18,7 +18,7 @@
   <% @expenses.each do |expense| %>
 
   <div class="row tr alert alert-info">
-    <div class="col">
+    <div class="col-3">
       <%= link_to expense do %>
       <% if expense.group.icon? %>
       <%= image_tag expense.group.icon.url, class: "img-thumbnail", alt: "icon" if expense.group.icon? %>
@@ -33,7 +33,7 @@
     <% end %>
     <div class="col">
       <p>$<%= expense.amount %></p><br>
-      <% if current_user.expenses.include?(@expense) %>
+      <% if current_user.id == expense.user.id %>
       <%= link_to "Edit", edit_expense_path(expense) %>
       <%= link_to "Delete", expense, method: :delete, data: { confirm: "Are you sure?" } %>
     <% end %>

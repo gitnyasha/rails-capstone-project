@@ -15,8 +15,10 @@
       <% end %>
     <div class="col">
     <%= link_to "Show", group %>
+        <% if current_user.id == group.user.id %>
         <%= link_to "Edit", edit_group_path(group) %>
         <%= link_to "Destroy", group, method: :delete, data: { confirm: "Are you sure?" } %>
+      <% end %>
     </div>
   </div>
   <hr>

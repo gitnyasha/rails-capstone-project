@@ -27,8 +27,10 @@
     <div class="col">
       <p>$<%= expense.amount %></p><br>
       <%= link_to "Show", expense %>
+      <% if current_user.id == expense.user.id %>
       <%= link_to "Edit", edit_expense_path(expense) %>
       <%= link_to "Destroy", expense, method: :delete, data: { confirm: "Are you sure?" } %>
+      <% end %>
     </div>
   </div>
   <hr>

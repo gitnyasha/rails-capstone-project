@@ -25,10 +25,9 @@
       <h3 class="text-muted"><%= external.name.capitalize %></h3><br>
       <p class="text-muted"><small><%= external.created_at.strftime("%B %d %Y, %l:%M%P") %></small></p>
     </div>
-    <% end %>
     <div class="col">
       <p>$<%= external.amount %></p><br>
-      <% if current_user.externals.include?(@external) %>
+      <% if current_user.id == external.user.id %>
       <%= link_to "Edit", edit_external_path(external) %>
       <%= link_to "Delete", external, method: :delete, data: { confirm: "Are you sure?" } %>
     <% end %>
