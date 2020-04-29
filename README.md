@@ -1,24 +1,60 @@
-# README
+# Group-transactions
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is aim to build an app for grouping home expenses by goal with your family/friends.
 
-Things you may want to cover:
+You can create an account and start grouping expenses with your family. You can also register certain expenses that are not attached with a specific group.
 
-* Ruby version
+## Built With
 
-* System dependencies
+- Ruby: 2.7.1
+- Rails: 6.0.2
 
-* Configuration
+## Live Version
 
-* Database creation
+[Group transactions](https://calm-beyond-52136.herokuapp.com/)
 
-* Database initialization
+## Installation
 
-* How to run the test suite
+### prerequisites
 
-* Services (job queues, cache servers, search engines, etc.)
+1. Install ImageMagick and/or libvips:
 
-* Deployment instructions
+   \$ brew install imagemagick vips
 
-* ...
+**Note:** if you haven't installed `brew`, check [this](https://docs.brew.sh/Homebrew-on-Linux#install) out.
+
+2. Get a local copy of the project cloning the[repository](https://github.com/fivan18/group-transactions):
+
+   \$ git colone https://github.com/fivan18/group-transactions.git
+
+### install
+
+Be sure to run `bundle` to install all necesary
+
+    $ bundle install
+
+Use the terminal and go inside the [project's](https://github.com/fivan18/group-transactions) root directory and run the next command
+
+    $ rails db:migrate
+
+Run the next command
+
+    $ rails s
+
+## Author
+
+👤 **Marshall Nyasha Chikari**
+
+- Github: [@gitnyasha](https://github.com/gitnyasha)
+- Twitter: [@fivanunam](https://twitter.com/marshallchikari)
+- Linkedin: [Marshall Chikari](https://www.linkedin.com/in/marshall-chikari)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/gitnyasha/group-transactions/issues).
+
+## 📝 License
+
+This project is [MIT]() licensed.
