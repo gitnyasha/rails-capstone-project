@@ -1,0 +1,13 @@
+<p>
+  <strong>Name:</strong>
+  <%= @external.name %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @external.amount %>
+</p>
+
+      <p class="text-muted"><small><%= @external.created_at.strftime("%B %d %Y, %l:%M%P") %></small></p>
+
+<%= link_to "Back", externals_path, class: "btn btn-info m-2" %>

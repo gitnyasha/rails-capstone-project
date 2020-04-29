@@ -1,4 +1,5 @@
-<%= link_to "Add New", new_expense_path, class: "btn btn-info" %>
+<%= link_to "Add New", new_expense_path, class: "btn btn-info m-2" %>
+<hr>
 <div class="container">
   <div class="row">
      <div class="col">
@@ -16,20 +17,26 @@
   <hr>
   <% @expenses.each do |expense| %>
 
-  <div class="row">
+  <div class="row tr alert alert-info">
     <div class="col">
-      <%= image_tag expense.group.icon.url, class: "img-thumbnail" if expense.group.icon? %>
+      <%= link_to expense do %>
+      <% if expense.group.icon? %>
+      <%= image_tag expense.group.icon.url, class: "img-thumbnail", alt: "icon" if expense.group.icon? %>
+    <% else %>
+    <p>None</p>
+    <% end %>
     </div>
     <div class="col-6">
-      <%= expense.name %><br>
-      <%= expense.created_at.strftime("%B %d %Y, %l:%M%P") %>
-
+      <h3 class="text-muted"><%= expense.name.capitalize %></h3><br>
+      <p class="text-muted"><small><%= expense.created_at.strftime("%B %d %Y, %l:%M%P") %></small></p>
     </div>
+    <% end %>
     <div class="col">
       <p>$<%= expense.amount %></p><br>
-      <%= link_to "Show", expense %>
+      <% if current_user.expenses.include?(@expense) %>
       <%= link_to "Edit", edit_expense_path(expense) %>
-      <%= link_to "Destroy", expense, method: :delete, data: { confirm: "Are you sure?" } %>
+      <%= link_to "Delete", expense, method: :delete, data: { confirm: "Are you sure?" } %>
+    <% end %>
     </div>
   </div>
   <hr>

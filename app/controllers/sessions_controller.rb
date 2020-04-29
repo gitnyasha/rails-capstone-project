@@ -9,13 +9,13 @@ class SessionsController < ApplicationController
       redirect_to user, notice: "You're logged in!!!"
     else
       # Create an error message.
-      flash[:danger] = 'No username found' # Not quite right!
-      render 'new'
+      flash[:danger] = "No username found" # Not quite right!
+      render "new"
     end
   end
 
   def destroy
     log_out
-    redirect_to root_url
+    redirect_to root_path
   end
 end

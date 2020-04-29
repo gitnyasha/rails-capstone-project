@@ -1,20 +1,22 @@
 
-<%= link_to "New Group", new_group_path %>
+<%= link_to "New Group", new_group_path, class: "btn btn-info m-2" %>
+<hr>
 <div class="container">
   <% @groups.each do |group| %>
-  <div class="row">
+  <div class="row alert alert-info">
     <div class="col">
-      <%= image_tag group.icon.url, class: "img-thumbnail" if group.icon? %>
+    <%= link_to group do %>
+      <%= image_tag group.icon.url, class: "img-thumbnail", alt: "icon" if group.icon? %>
     </div>
     <div class="col-6">
-      <%= group.name %><br>
-      <%= group.created_at %>
-
+      <h5 class="text-muted"><%= group.name.capitalize %></h5>
+      <p><small class="text-muted"><%= group.created_at.strftime("%B %d %Y, %l:%M%P") %></small></p>
     </div>
+      <% end %>
     <div class="col">
-    <td><%= link_to "Show", group %></td>
-        <td><%= link_to "Edit", edit_group_path(group) %></td>
-        <td><%= link_to "Destroy", group, method: :delete, data: { confirm: "Are you sure?" } %></td>
+    <%= link_to "Show", group %>
+        <%= link_to "Edit", edit_group_path(group) %>
+        <%= link_to "Destroy", group, method: :delete, data: { confirm: "Are you sure?" } %>
     </div>
   </div>
   <hr>

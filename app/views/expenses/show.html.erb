@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<%= image_tag @expense.group.icon.url, class: "img-thumbnail", alt: "icon" if @expense.group.icon? %>
 
 <p>
   <strong>Name:</strong>
@@ -10,5 +10,6 @@
   <%= @expense.amount %>
 </p>
 
-<%= link_to 'Edit', edit_expense_path(@expense) %> |
-<%= link_to 'Back', expenses_path %>
+      <p class="text-muted"><small><%= @expense.created_at.strftime("%B %d %Y, %l:%M%P") %></small></p>
+
+<%= link_to "Back", expenses_path, class: "btn btn-info m-2" %>

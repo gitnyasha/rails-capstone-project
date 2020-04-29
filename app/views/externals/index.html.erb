@@ -1,0 +1,39 @@
+<%= link_to "Add New", new_external_path, class: "btn btn-info m-2" %>
+<hr>
+<div class="container">
+  <div class="row">
+     <div class="col">
+    Total expenses
+  </div>
+   <div class="col-6">
+    
+  </div>
+   <div class="col">
+     <% @externals.first(1).each do |external| %>
+    <p>$<%= external.total_ex %></p>
+    <% end %>
+  </div>
+  </div>
+  <hr>
+  <% @externals.each do |external| %>
+
+  <div class="row tr alert alert-info">
+    <div class="col">
+    <p>None</p>
+    </div>
+    <div class="col-6">
+      <h3 class="text-muted"><%= external.name.capitalize %></h3><br>
+      <p class="text-muted"><small><%= external.created_at.strftime("%B %d %Y, %l:%M%P") %></small></p>
+    </div>
+    <% end %>
+    <div class="col">
+      <p>$<%= external.amount %></p><br>
+      <% if current_user.externals.include?(@external) %>
+      <%= link_to "Edit", edit_external_path(external) %>
+      <%= link_to "Delete", external, method: :delete, data: { confirm: "Are you sure?" } %>
+    <% end %>
+    </div>
+  </div>
+  <hr>
+  <% end %>
+</div>
