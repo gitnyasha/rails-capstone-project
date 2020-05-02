@@ -13,6 +13,10 @@ You can create an account and start grouping expenses with your family. You can 
 
 [Group transactions](https://calm-beyond-52136.herokuapp.com/)
 
+## Video
+
+[Group transactions](https://www.loom.com/share/3354a8ee150747e0a675339d944c5c0c)
+
 ### install
 
 Be sure to run `bundle` to install all necesary
