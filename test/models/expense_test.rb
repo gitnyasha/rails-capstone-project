@@ -1,7 +1,17 @@
-require 'test_helper'
+require "test_helper"
 
 class ExpenseTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def setup
+    @expense = Expense.new(name: "Lorem ipsum", amount: " ")
+  end
+
+  test "name should be present" do
+    @expense.name = "   "
+    assert_not @expense.valid?
+  end
+
+  test "ammount should be present" do
+    @expense.amount = "   "
+    assert_not @expense.valid?
+  end
 end

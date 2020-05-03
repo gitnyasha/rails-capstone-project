@@ -1,24 +1,50 @@
-# README
+# Group-transactions
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is aim to build an app for grouping home expenses by goal with your family/friends.
 
-Things you may want to cover:
+You can create an account and start grouping expenses with your family. You can also register certain expenses that are not attached with a specific group.
 
-* Ruby version
+## Built With
 
-* System dependencies
+- Ruby: 2.7.1
+- Rails: 6.0.2
 
-* Configuration
+## Live Version
 
-* Database creation
+[Group transactions](https://calm-beyond-52136.herokuapp.com/)
 
-* Database initialization
+## Video
 
-* How to run the test suite
+[Group transactions](https://www.loom.com/share/3354a8ee150747e0a675339d944c5c0c)
 
-* Services (job queues, cache servers, search engines, etc.)
+### install
 
-* Deployment instructions
+Be sure to run `bundle` to install all necesary
 
-* ...
+    $ bundle install
+
+Use the terminal and go inside the [project's](https://github.com/gitnyasha/rails-capstone-project) root directory and run the next command
+
+    $ rails db:migrate
+
+Run the next command
+
+    $ rails s
+
+## Author
+
+👤 **Marshall Nyasha Chikari**
+
+- Github: [@gitnyasha](https://github.com/gitnyasha)
+- Twitter: [@marshallchikari](https://twitter.com/marshallchikari)
+- Linkedin: [Marshall Chikari](https://www.linkedin.com/in/marshall-chikari)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/gitnyasha/rails-capstone-project/issues).
+
+## 📝 License
+
+This project is [MIT]() licensed.
